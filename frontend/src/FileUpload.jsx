@@ -12,7 +12,7 @@ function FileUpload() {
   const handleUpload = async () => {
     const formData = new FormData();
     formData.append("file", file);
-    const res = await axios.post("securefilex-production.up.railway.app/upload", formData);
+    const res = await axios.post("https://securex-cips.onrender.com/upload", formData);
     setKey(res.data.key);
     setIv(res.data.iv);
     setEncryptedFile(res.data.encryptedFile);
@@ -20,7 +20,7 @@ function FileUpload() {
   };
 
   const handleDecrypt = async () => {
-    const res = await axios.post("securefilex-production.up.railway.app/decrypt", {
+    const res = await axios.post("https://securex-cips.onrender.com/decrypt", {
       key,
       iv,
       encryptedFile,
