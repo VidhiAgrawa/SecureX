@@ -7,7 +7,7 @@ const cors = require("cors")
 const app = express();
 app.use(helmet());
 app.use(express.json());
-app.use(cors({origin:"https://secure-file-x-indol.vercel.app/"}))
+app.use(cors({origin:"https://secure-x-ten.vercel.app/"}))
 
 const upload = multer({ dest: "uploads/" });
 
